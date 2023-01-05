@@ -94,7 +94,7 @@ def escape_chars(text, chars):
 def convert_kwargs_to_cmd_line_args(kwargs):
     """Helper function to build command line arguments out of dict."""
     args = []
-    for k in sorted(kwargs.keys()):
+    for k in kwargs.keys():
         v = kwargs[k]
         if isinstance(v, Iterable) and not isinstance(v, str):
             for value in v:
